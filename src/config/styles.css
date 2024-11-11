@@ -1,0 +1,189 @@
+/* Main layout */
+.main {
+    padding: 1rem;
+}
+
+/* Sidebar title */
+.sidebar-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #1f1f1f;
+}
+
+/* Text display */
+.passage-text {
+    font-family: "Times New Roman", Times, serif;
+    line-height: 1.6;
+    padding: 1.5rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    color: #e0e0e0;  /* Light text color */
+}
+
+.passage-text pre {
+    font-family: "Times New Roman", Times, serif;
+    margin: 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    color: #e0e0e0;  /* Light text color */
+}
+
+/* POS tags */
+.pos-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 5px;
+}
+
+.pos-tag {
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.9rem;
+}
+
+/* Character network */
+.network-container {
+    background: #ffffff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Metrics and charts */
+.metrics-card {
+    padding: 1rem;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+}
+
+/* Stage directions */
+.stage-direction {
+    color: #888888;
+    font-style: italic;
+}
+
+/* Character names */
+.character-name {
+    color: #ffd700;
+    font-weight: bold;
+}
+
+/* Line numbers */
+.line-number {
+    color: #666666;
+    font-size: 0.9rem;
+    margin-right: 1rem;
+    user-select: none;
+    font-family: monospace;
+}
+
+/* Text container with fixed height and scrolling */
+.text-container {
+    height: calc(100vh - 300px);  /* Adjust based on your header size */
+    overflow-y: auto;
+    margin: 1rem 0;
+    border-radius: 5px;
+    background: #1e1e1e;  /* Dark background */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Custom scrollbar */
+.text-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.text-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+    border-radius: 4px;
+}
+
+.text-container::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 4px;
+}
+
+.text-container::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+/* Make sure text is visible in Streamlit */
+.stText {
+    color: #e0e0e0 !important;
+}
+
+
+
+.display-mode-container {
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.button-group {
+    display: flex;
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #2d2d2d;
+}
+
+.mode-button {
+    flex: 1;
+    padding: 0.75rem;
+    border: none;
+    background: #2d2d2d;
+    color: #e0e0e0;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border-right: 1px solid #1e1e1e;
+}
+
+.mode-button:last-child {
+    border-right: none;
+}
+
+.mode-button.active {
+    background: #4a4a4a;
+    color: #ffffff;
+}
+
+.mode-button:hover {
+    background: #3d3d3d;
+}
+
+.pos-legend {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #2d2d2d;
+    border-radius: 5px;
+}
+
+.pos-legend-title {
+    color: #e0e0e0;
+    margin-bottom: 0.5rem;
+}
+
+.pos-legend-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0.5rem;
+}
+
+.pos-tag-item {
+    display: flex;
+    align-items: center;
+    padding: 0.25rem;
+}
+
+.pos-tag-color {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.5rem;
+    border-radius: 3px;
+}
