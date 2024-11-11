@@ -14,6 +14,16 @@ from src.ui.components.scene_analysis import render_scene_analysis
 from src.ui.components.about_page import render_about_page
 from src.data.parser import extract_characters, parse_play
 
+import spacy
+from pathlib import Path
+
+# Load or download the spaCy model
+model_path = Path(spacy.util.get_package_path("en_core_web_sm"))
+if not model_path.exists():
+    spacy.cli.download("en_core_web_sm")
+nlp = spacy.load("en_core_web_sm")
+
+
 def initialize_session_state():
     """Initialize session state variables."""
     if 'nlp' not in st.session_state:
